@@ -16,7 +16,7 @@ function AddT() {
 
     const handlePost=(e)=>{
         e.preventDefault()
-        axios.post("http://localhost:6200/create/teacher",{
+        axios.post("https://backend-43uo.onrender.com/create/teacher",{
             "Name":Name,
             "Qualification":Qualification,
             "Joining":Joining,

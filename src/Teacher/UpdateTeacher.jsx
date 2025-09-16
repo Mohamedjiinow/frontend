@@ -16,7 +16,7 @@ function UpdateTeacher() {
     
   const params=useParams()
   const handleSingleData=()=>{
-    axios.get(`http://localhost:6200/read/Teacher/${params.id}`).then((res)=>{
+    axios.get(`https://backend-43uo.onrender.com/read/Teacher/${params.id}`).then((res)=>{
         setName(res.data[0].Name),
         setQualification(res.data[0].Qualification),
         setJoining(res.data[0].Joining),
@@ -33,7 +33,7 @@ function UpdateTeacher() {
   const handleUpdate=(e)=>{
     
         e.preventDefault()
-        axios.put(`http://localhost:6200/update/Teacher/${params.id}`,{
+        axios.put(`https://backend-43uo.onrender.com/update/Teacher/${params.id}`,{
             "Name":Name,
             "Qualification":Qualification,
             "Joining":Joining,

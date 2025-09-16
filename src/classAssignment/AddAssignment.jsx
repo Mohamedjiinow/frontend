@@ -37,7 +37,7 @@ function AddAssignment() {
                 console.log(pair[0] + ": " + pair[1])
             }
 
-            await axios.post("http://localhost:6200/create/Assignment", formData, {
+            await axios.post("https://backend-43uo.onrender.com/create/Assignment", formData, {
                 headers: { "Content-Type": "multipart/form-data" }
             })
 

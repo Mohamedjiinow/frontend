@@ -24,7 +24,7 @@ export default function UpdateAssignment() {
   useEffect(() => {
     if (!id) return;
     axios
-      .get(`http://localhost:6200/readSingle/Assignment/${id}`)
+      .get(`https://backend-43uo.onrender.com/readSingle/Assignment/${id}`)
       .then((res) => {
         const data = res.data[0] || {};
         setForm({

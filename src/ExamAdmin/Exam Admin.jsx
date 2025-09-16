@@ -14,10 +14,10 @@ function ExamAdmin() {
 
   const loadData = async () => {
     try {
-      const studentRes = await axios.get("http://localhost:6200/read/student");
+      const studentRes = await axios.get("https://backend-43uo.onrender.com/read/student");
       setStudents(studentRes.data);
 
-      const examRes = await axios.get("http://localhost:6200/read/exam");
+      const examRes = await axios.get("https://backend-43uo.onrender.com/read/exam");
       setExams(examRes.data);
     } catch (err) {
       console.error("Error loading data:", err);
@@ -31,7 +31,7 @@ function ExamAdmin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:6200/create/exam", form);
+      await axios.post("https://backend-43uo.onrender.com/create/exam", form);
       setForm({ subject: "", date: "", totalMarks: "", studentId: "" });
 
       // Dib u refresh garee exams

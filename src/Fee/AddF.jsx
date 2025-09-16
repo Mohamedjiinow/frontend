@@ -19,14 +19,14 @@ function Fee() {
 
   const fetchFees = () => {
     axios
-      .get("http://localhost:6200/fee/read")
+      .get("https://backend-43uo.onrender.com/fee/read")
       .then((res) => setFees(res.data))
       .catch((err) => console.error(err));
   };
 
   const fetchStudents = () => {
     axios
-      .get("http://localhost:6200/read/student")
+      .get("https://backend-43uo.onrender.com/read/student")
       .then((res) => setStudents(res.data))
       .catch((err) => console.error(err));
   };
@@ -38,7 +38,7 @@ function Fee() {
 
   const handleSubmit = () => {
     axios
-      .post("http://localhost:6200/fee/create", form)
+      .post("https://backend-43uo.onrender.com/fee/create", form)
       .then(() => {
         fetchFees();
         setForm({ studentId: "", amount: "", month: "", paidDate: "" });
@@ -48,7 +48,7 @@ function Fee() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:6200/fee/delete/${id}`)
+      .delete(`https://backend-43uo.onrender.com/fee/delete/${id}`)
       .then(() => fetchFees())
       .catch((err) => console.error(err));
   };

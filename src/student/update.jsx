@@ -14,7 +14,7 @@ function UpdateStudent() {
 
   const params=useParams()
   const handleSingleData=()=>{
-    axios.get(`http://localhost:6200/read/student/${params.id}`).then((res)=>{
+    axios.get(`https://backend-43uo.onrender.com/read/student/${params.id}`).then((res)=>{
         setName(res.data[0].Name),
         setGuardianName(res.data[0].GuardianName),
         setGender(res.data[0].Gender),
@@ -29,7 +29,7 @@ function UpdateStudent() {
   const handleUpdate=(e)=>{
     
         e.preventDefault()
-        axios.put(`http://localhost:6200/update/student/${params.id}`,{
+        axios.put(`https://backend-43uo.onrender.com/update/student/${params.id}`,{
             "Name":Name,
             "GuardianName":GuardianName,
             "Gender":Gender,

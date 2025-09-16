@@ -8,7 +8,7 @@ function DisplayS() {
   const [data, setData] = useState([]);
 
   const handlePost = () => {
-    axios.get("http://localhost:6200/read/student")
+    axios.get("https://backend-43uo.onrender.com/read/student")
       .then((res) => setData(res.data))
       .catch((err) => console.error(err));
   };
@@ -19,7 +19,7 @@ function DisplayS() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:6200/delete/student/${id}`)
+      .delete(`https://backend-43uo.onrender.com/delete/student/${id}`)
       .then(() => {
         alert("Successfully deleted");
         handlePost();

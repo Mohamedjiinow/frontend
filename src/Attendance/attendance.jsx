@@ -8,14 +8,14 @@ function Attendance() {
 
   const fetchAttendance = () => {
     axios
-      .get(`http://localhost:6200/attendance/date/${date}`)
+      .get(`https://backend-43uo.onrender.com/attendance/date/${date}`)
       .then((res) => setStudents(res.data))
       .catch((err) => console.error(err));
   };
 
   const handleStatus = (student, status) => {
     axios
-      .post("http://localhost:6200/attendance/mark", {
+      .post("https://backend-43uo.onrender.com/attendance/mark", {
         studentId: student._id,
         status,
         date,

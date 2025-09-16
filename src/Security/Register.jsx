@@ -18,8 +18,8 @@ function RegisterStudent() {
 
         const url =
           active === "students"
-            ? "http://localhost:6200/create/students"
-            : "http://localhost:6200/create/admin";
+            ? "https://backend-43uo.onrender.com/create/students"
+            : "https://backend-43uo.onrender.com/create/admin";
 
         const payload = { name, email, phone, password }
 

@@ -15,7 +15,7 @@ function AddBook() {
     formData.append("img", img); // file-ka saxda ah
 
     axios
-      .post("http://localhost:6200/create/book", formData, {
+      .post("https://backend-43uo.onrender.com/create/book", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       })
       .then(() => {

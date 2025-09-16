@@ -9,7 +9,7 @@ function DisplayBooks() {
   // Fetch books
   const fetchBooks = async () => {
     try {
-      const res = await axios.get("http://localhost:6200/read/books");
+      const res = await axios.get("https://backend-43uo.onrender.com/read/books");
       setBooks(res.data);
     } catch (err) {
       console.error(err);
@@ -19,7 +19,7 @@ function DisplayBooks() {
   // Delete book
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:6200/book/delete/${id}`);
+      await axios.delete(`https://backend-43uo.onrender.com/book/delete/${id}`);
       fetchBooks();
     } catch (err) {
       console.error(err);
@@ -60,7 +60,7 @@ function DisplayBooks() {
                 className="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition relative"
               >
                 <img
-                  src={`http://localhost:6200/allimages/${book.img}`}
+                  src={`https://backend-43uo.onrender.com/allimages/${book.img}`}
                   alt={book.img}
                   className="w-full h-48 object-cover rounded mb-4"
                 />

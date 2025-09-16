@@ -8,7 +8,7 @@ function Assignment() {
 
   // Read assignments
   const handleReadData = () => {
-    axios.post("http://localhost:6200/read/Assignment").then((res) => {
+    axios.post("https://backend-43uo.onrender.com/read/Assignment").then((res) => {
       setData(res.data);
     });
   };

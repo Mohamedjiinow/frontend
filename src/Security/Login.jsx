@@ -16,8 +16,8 @@ function Login() {
 
     const url =
       active === "students"
-        ? "http://localhost:6200/login/students"
-        : "http://localhost:6200/login/admin";
+        ? "https://backend-43uo.onrender.com/login/students"
+        : "https://backend-43uo.onrender.com/login/admin";
 
     const payload = active === "students" ? { email, password } :  { email, password }
 
